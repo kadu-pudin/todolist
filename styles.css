@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  background: #222;
+  color: #eee;
+  accent-color: black;
+}
+
+header {
+  color: #eee;
+  padding: 20px 30px;
+  background: #111;
+  font-size: 1.6rem;
+}
+
+#submit-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px;
+}
+
+#task-input {
+  width: 500px;
+  height: 30px;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+}
+
+input:focus {
+  border-color: #666;
+}
+
+.delete-task>img {
+  width: 20px;
+  filter: invert();
+}
+
+.delete-task>img:active {
+  filter: invert(80%);
+}
+
+main {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+::selection {
+  color: #111;
+  background: #666;
+}
+
+.task-node {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 450px;
+  padding: 30px 40px;
+  font-size: 1.2rem;
+  background: #333;
+  border-radius: 8px;
+}
+
+.checkbox-node {
+  width: 16px;
+  height: 16px;
+}
+
+.delete-task {
+  background: none;
+  border: none;
+}
+
+input {
+  outline: none;
+  border-radius: 8px;
+  border: #444 solid 1px;
+  background: none;
+  color: #eee;
+}
+
+#task-submit {
+  width: 50px;
+  height: 50px;
+  padding: 10px 5px;
+  font-size: 1.4rem;
+}
