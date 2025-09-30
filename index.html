@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles.css" rel="stylesheet" />
-    <title></title>
+    <title>ToDo List</title>
   </head>
 
   <body>
     <header>To-Do List</header>
     <main>
-      <div id="submit-section">
-        <input id="task-input" type="text" maxlength="50" />
-        <input id="task-submit" type="submit" value="✔" />
-      </div>
-      <div class="task-node">
-        <div>
-          <input class="checkbox-node" type="checkbox" />
-          <span>Bater no Jão</span>
-        </div>
-        <button class="delete-task"><img src="images/lixo.png" /></button>
-      </div>
+      <form id="submit-section" autocomplete="off">
+        <input id="task-input" maxlength="50" />
+        <input id="submit-btn" value="&#10003;" type="submit" />
+      </form>
+      <section id="task-section"></section>
     </main>
+    <script src="script.js"></script>
   </body>
-
 </html>
