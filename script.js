@@ -19,7 +19,7 @@ function render(tasks) {
         <input class="checkbox-node" type="checkbox" />
         <span>${tasks[i]}</span>
       </div>
-      <input class="delete-task" type="image" src="/images/lixo.png" />
+      <input class="delete-task" type="image" src="/image/lixo.png" />
     </div>
     `;
   }
