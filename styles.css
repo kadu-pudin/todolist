@@ -6,7 +6,7 @@ body {
 }
 
 :root {
-  font-size: 16px;
+  font-size: clamp(14px, 1.2vw, 16px);
 }
 
 header {
@@ -33,7 +33,18 @@ main {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin: 1.5rem 0 1rem 0;
+  margin: 1rem 0 1rem 0;
+}
+
+#submit-btn {
+  width: 50px;
+  height: 50px;
+  padding: 0.1em;
+  font-size: 1.2rem;
+}
+
+#submit-btn:hover {
+  cursor: pointer;
 }
 
 #task-section {
@@ -45,18 +56,23 @@ main {
 }
 
 #task-input {
+  box-sizing: border-box;
   width: 90%;
   max-width: 500px;
   height: 30px;
-  font-size: clamp(1rem, .4vw + 1rem, 1rem);;
-  padding: .5em 1.2em;
+  font-size: clamp(1rem, .4vw + 1rem, 1rem);
+  padding: 1.7rem 1rem;
 }
 
-#submit-btn {
-  width: 50px;
-  height: 50px;
-  padding: 0.1em;
-  font-size: 1.2rem;
+@media (max-width: 350px) {
+  #submit-section {
+    flex-direction: column;
+  }
+
+  #task-input, #submit-btn {
+    width: 100%;
+    max-width: none;
+  }
 }
 
 input {
@@ -110,8 +126,8 @@ input:focus {
 }
 
 .checkbox-node {
-  width: 20px;
-  height: 20px;
+  width: 1.2em;
+  height: 1.2em;
   cursor: pointer;
 }
 
@@ -140,4 +156,19 @@ input:focus {
   cursor: pointer;
   width: 1.6em;
   border: none;
+}
+
+@media (max-width: 400px) {
+  header {
+    font-size: 1.2rem;
+    padding: 0.4em;
+  }
+
+  #task-input {
+    width: 100%;
+  }
+
+  #submit-btn {
+    font-size: 1rem;
+  }
 }
