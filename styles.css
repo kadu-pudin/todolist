@@ -1,17 +1,26 @@
-body {
-  margin: 8px 12px;
-  background: #222;
-  color: #eee;
-  accent-color: #999;
+:root {
+  color-scheme: dark;
+  font-size: clamp(14px, 1.2vw, 16px);
+  --header-color: linear-gradient(to left, #111, var(--terciary-color));
+  --base-color:#222;
+  --primary-color: #333;
+  --secondary-color: #383838;
+  --terciary-color: #141414;
+  --text-color: #eee;
+  --secondary-text: #ccc;
+  --accent-color: #999;
 }
 
-:root {
-  font-size: clamp(14px, 1.2vw, 16px);
+body {
+  margin: 8px 12px;
+  background: var(--base-color);
+  color: var(--text-color);
+  accent-color: gray;
 }
 
 header {
-  background: linear-gradient(to left, #111, #1a1a1a);
-  color: #ccc;
+  background: var(--header-color);
+  color: var(--secondary-text);
   border-radius: 8px;
   padding: .5em 1em;
   font-size: clamp(1.4rem, 2vw + 1rem, 1.6rem);
@@ -79,18 +88,14 @@ input {
   font-family: monospace;
   outline: none;
   border-radius: 8px;
-  border: #444 solid 1px;
-  background: none;
-  color: #ccc;
-}
-
-input:hover {
-  background: #1f1f1f;
+  border: var(--border-color) solid 1px;
+  background: var(--primary-color);
+  color: var(--secondary-text);
 }
 
 input:focus {
-  background: #1f1f1f;
-  border-color: #666;
+  
+  border-color: var(--accent-color);
 }
 
 .delete-task>img {
@@ -103,8 +108,8 @@ input:focus {
 }
 
 ::selection {
-  color: #111;
-  background: #999;
+  color: var(--base-color);
+  background: var(--accent-color);
 }
 
 .task-left {
@@ -121,8 +126,12 @@ input:focus {
   justify-content: space-between;
   padding: min(1.2em, 6%);
   font-size: 1rem;
-  background: #333;
+  background: var(--primary-color);
   border-radius: 8px;
+}
+
+.task-node:hover {
+  background: var(--secondary-color);
 }
 
 .checkbox-node {
@@ -132,27 +141,29 @@ input:focus {
 }
 
 .checkbox-node:hover {
-  background: #222;
+  background: var(--base-color);
 }
 
 .checkbox-node:not(:checked) {
   appearance: none;
   background: none;
-  border: 1px solid #999;
+  border: 1px solid var(--accent-color);
   border-radius: 2px;
 }
 
 .completed {
   text-decoration: line-through;
-  color: #999;
+  color: var(--accent-color);
   transition: color 0.3s;
 }
 
 .delete-task:hover {
-  filter: brightness(1.5);
+  background: none;
+  filter: brightness(0.75);
 }
 
 .delete-task {
+  background: none;
   cursor: pointer;
   width: 1.6em;
   border: none;
