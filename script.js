@@ -71,6 +71,7 @@ submitSection.addEventListener("submit", function (e) {
 const themeToggle = document.querySelector("#theme-toggle");
 let lightMode = localStorage.getItem("lightMode") || "disabled";
 
+// Verifica o armazenamento local
 if (lightMode == "enabled") {
   themeToggle.src = "/images/dark_mode-icon.png";
   document.body.classList.toggle("light-mode");
