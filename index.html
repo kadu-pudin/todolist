@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,14 +12,22 @@
   </head>
 
   <body>
+    <input id="theme-toggle" type="image" src="/images/light_mode-icon.png" />
     <header>
-      <span>To-Do List</span>
+      <h3>To-Do List</h3>
+      <form id="submit-section" autocomplete="off">
+        <input
+          id="submit-input"
+          class="submit-el"
+          placeholder="Crie uma nota!"
+          maxlength="50"
+        />
+        <button id="submit-btn" class="submit-el" type="submit">
+          <div></div>
+        </button>
+      </form>
     </header>
     <main>
-      <form id="submit-section" autocomplete="off">
-        <input id="task-input" maxlength="50" />
-        <input id="submit-btn" value="&#10003;" type="submit" />
-      </form>
       <section id="task-section"></section>
     </main>
     <script src="script.js"></script>
