@@ -1,13 +1,13 @@
 const submitSection = document.querySelector("#submit-section");
-const taskInput = document.querySelector("#submit-input");
+const submitInput = document.querySelector("#submit-input");
 const taskSection = document.querySelector("#task-section");
 
-// Acesso as tarefas do armazenamento local (dados salvos no navegador)
+// Acesso as tarefas do armazenamento local
 const tasksFromLocalStorage = JSON.parse(localStorage.getItem("myTasks")) || [];
 
 let myTasks = [];
 
-// Atribuir e renderizar se houver tarefas armazenadas localmente
+// Atribuir as tarefas salvas localmente
 myTasks = tasksFromLocalStorage;
 render(myTasks);
 
@@ -60,9 +60,9 @@ taskSection.addEventListener("click", function (e) {
 // Adicionar tarefa
 submitSection.addEventListener("submit", function (e) {
   e.preventDefault();
-  if (taskInput.value === "") return;
-  myTasks.push({ text: taskInput.value.trim(), completed: false });
-  taskInput.value = "";
+  if (submitInput.value === "") return;
+  myTasks.push({ text: submitInput.value.trim(), completed: false });
+  submitInput.value = "";
   updateLocalStorage();
   render(myTasks);
 });

@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
+    
+    <!-- Link do site: kadolist.netlify.app -->
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ka-Do List</title>
     <link href="styles.css" rel="stylesheet" />
-    <title>To-Do List</title>
+
+    <!-- Icone do site -->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -26,14 +31,16 @@
   </head>
 
   <body>
-    <input id="theme-toggle" type="image" src="/images/light_mode-icon.png" />
+    <!-- Cabeçalho -->
     <header>
-      <h3>To-Do List</h3>
+      <input id="theme-toggle" type="image" src="/images/light_mode-icon.png" />
+      <h3>Ka-Do List</h3>
+
       <form id="submit-section" autocomplete="off">
         <input
           id="submit-input"
           class="submit-el"
-          placeholder="Crie uma nota!"
+          placeholder="Crie uma tarefa!"
           maxlength="50"
         />
         <button id="submit-btn" class="submit-el" type="submit">
@@ -41,6 +48,8 @@
         </button>
       </form>
     </header>
+
+    <!-- Tarefas -->
     <main>
       <section id="task-section"></section>
     </main>
